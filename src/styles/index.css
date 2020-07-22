@@ -1,8 +1,17 @@
 body {
   margin: 0;
   border: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,7 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #9B99FF;
+  background-color: #9b99ff;
 }
 
 #quote-box {
@@ -53,8 +62,8 @@ body {
   line-height: 1.5;
   border-radius: 0.25em;
   color: white;
-  background-color: #9B99FF;
-  border-color: #9B99FF;
+  background-color: #9b99ff;
+  border-color: #9b99ff;
   cursor: pointer;
   text-decoration: none;
   text-transform: none;

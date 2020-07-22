@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+
 const numberOfQuotes = 408;
 
 class QuoteBox extends React.Component {
@@ -18,22 +19,22 @@ class QuoteBox extends React.Component {
 
   componentDidMount() {
     fetch(
-      'https://gist.githubusercontent.com/redacuve/0c12440a55d4280ce459d2148e17c971/raw/a27b0f9f0263ba9a35e6a4c59d4601d817b0ee57/quotes.json'
+      'https://gist.githubusercontent.com/redacuve/0c12440a55d4280ce459d2148e17c971/raw/a27b0f9f0263ba9a35e6a4c59d4601d817b0ee57/quotes.json',
     )
-      .then((response) => response.json())
+      .then(response => response.json())
       .then(
-        (result) => {
+        result => {
           this.setState({
             isLoaded: true,
             quotes: result.quotes,
           });
         },
-        (error) => {
+        error => {
           this.setState({
             isLoaded: true,
             error,
           });
-        }
+        },
       );
   }
 
@@ -42,7 +43,9 @@ class QuoteBox extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, quotes, index } = this.state;
+    const {
+      error, isLoaded, quotes, index,
+    } = this.state;
     if (error) {
       return (
         <div>
@@ -58,23 +61,26 @@ class QuoteBox extends React.Component {
       <div id="quote-box">
         <p id="text">
           <FontAwesomeIcon icon={faQuoteLeft} />
-          
+
           {quotes[index].quote}
-          
+
           <FontAwesomeIcon icon={faQuoteRight} />
         </p>
-        <p id="author">- {quotes[index].author}</p>
+        <p id="author">
+          -
+          {quotes[index].author}
+        </p>
         <button id="new-quote" type="button" onClick={this.newQuote}>
           New Quote
         </button>
         <a
           href={
-            'https://twitter.com/intent/tweet?hashtags=quotes,motivational&text=' +
-            '"' +
-            quotes[index].quote +
-            '"' +
-            ' - ' +
-            quotes[index].author
+            `${'https://twitter.com/intent/tweet?hashtags=quotes,motivational&text='
+            + '"'}${
+              quotes[index].quote
+            }"`
+            + ` - ${
+              quotes[index].author}`
           }
           id="tweet-quote"
           target="_blank"
