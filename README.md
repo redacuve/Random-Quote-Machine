@@ -11,7 +11,11 @@
 
 
 <!-- Project Header -->
-  <h1 align="center">Project: Random Motivational Quotes Machine</h1>
+  <p align="center">
+    <img src="quotes.png" width="250">
+  <br>
+  </p>
+  <h1 align="center">Project Random Motivational Quotes Machine</h1>
   <p align="center">
   <br>
    <a href="https://github.com/redacuve/Random-Quote-Machine"><strong>Explore the repo »</strong></a>
@@ -46,6 +50,10 @@
 
 This is a simple project build with REACT.
 This is s simple Random quote visualizer. you can click on the new quote button and you will give one of 408 different quotes, also you can click on tweet quote and you will be able to tweet that quote.
+
+<p align="center">
+    <img src="quotes.gif" width="450">
+</p>
 
 ### Built With
 
